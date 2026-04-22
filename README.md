@@ -1,6 +1,9 @@
 # React Pics
 
 SPA de galeria de imagens desenvolvida com React e Vite para consumo da API Picsum Photos.
+
+[Link do Projeto - Deploy](https://react-pics-fawn.vercel.app/)
+
 | Tela inicial | Paginação |
 | --- | --- |
 | <img width="1904" height="914" alt="image" src="https://github.com/user-attachments/assets/9b0232b0-e503-4eb2-9ef4-bb30a2fdef20" /> | <img width="1903" height="912" alt="image" src="https://github.com/user-attachments/assets/475bc6f9-e83e-4d61-acb8-a699ea8d32e1" /> | 
@@ -65,8 +68,3 @@ src/
 - Parâmetros opcionais na URL final:
 	grayscale
 	blur={n}
-
-## Deploy
-
-Link de deploy:
-[LINK_DO_DEPLOY]
