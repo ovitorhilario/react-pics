@@ -10,7 +10,7 @@ function App() {
         <AppBar position="static" color="primary">
           <Toolbar>
             <Typography variant="h6" component="h1" sx={{ fontWeight: 700 }}>
-              Picsum Gallery
+              React Pics
             </Typography>
           </Toolbar>
         </AppBar>
