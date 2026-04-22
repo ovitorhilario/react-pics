@@ -9,7 +9,8 @@ const ImageModal = lazy(() => import('./ImageModal.jsx'))
 const skeletonItems = Array.from({ length: 12 }, (_, index) => index)
 
 function ImageGallery() {
-  const { images, loading, error, selectImage } = useGallery()
+  const { images, loading, error, selectImage, filters } = useGallery()
+  const skeletonRatio = `${filters.width} / ${filters.height}`
 
   if (loading) {
     return (
@@ -17,7 +18,7 @@ function ImageGallery() {
         {skeletonItems.map((item) => (
           <Grid key={item} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
             <Box sx={{ borderRadius: 1, overflow: 'hidden', border: '1px solid', borderColor: 'divider' }}>
-              <Skeleton variant="rectangular" sx={{ width: '100%', aspectRatio: '1 / 1' }} />
+              <Skeleton variant="rectangular" sx={{ width: '100%', aspectRatio: skeletonRatio }} />
               <Box sx={{ p: 1.5 }}>
                 <Skeleton width="75%" />
                 <Skeleton width="55%" />

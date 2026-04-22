@@ -111,6 +111,9 @@ export function GalleryProvider({ children }) {
         return {
           ...apiImage,
           displayUrl,
+          renderWidth: width,
+          renderHeight: height,
+          aspectRatio: width > 0 && height > 0 ? width / height : 1,
         }
       })
 

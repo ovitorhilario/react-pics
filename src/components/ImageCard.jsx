@@ -12,6 +12,7 @@ import {
 
 function ImageCard({ image, onClick }) {
   const [favorite, setFavorite] = useState(false)
+  const ratio = image?.renderWidth && image?.renderHeight ? `${image.renderWidth} / ${image.renderHeight}` : '1 / 1'
 
   const handleFavoriteClick = (event) => {
     event.stopPropagation()
@@ -36,7 +37,7 @@ function ImageCard({ image, onClick }) {
         component="img"
         image={image.displayUrl}
         alt={`Imagem de ${image.author}`}
-        sx={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
+        sx={{ aspectRatio: ratio, objectFit: 'cover' }}
       />
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
